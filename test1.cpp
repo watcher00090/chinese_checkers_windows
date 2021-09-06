@@ -16,11 +16,21 @@
 using namespace std;
 
 class Hextile {
-
+public:
+    int y_hex;
+    int x_hex;
+    int y_hex;
+    int z_hex;
+    unsigned* piece_idx; // the index into the vector<Piece> of the piece that's sitting on this square, if this square is occupied by a piece
 };
 
 class Piece {
-
+public:
+    unsigned player_num;
+    unsigned hextile_idx; // the index into the vector<Hextile> of the square that this piece is sitting on
+    int x_hex; // hex coordinates of the square the piece is currently on
+    int y_hex;
+    int z_hex;
 };
 
 vector<Hextile> board;
